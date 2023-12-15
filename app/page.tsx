@@ -11,7 +11,9 @@ export default function Home() {
 
   return (
     <>
-      <main className={`min-h-screen flex-col items-start justify-start p-24`}>
+      <main
+        className={`min-h-screen flex flex-col items-start justify-start p-8 sm:p-24`}
+      >
         <motion.div
           initial={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -25,8 +27,8 @@ export default function Home() {
               className="border-2 border-black w-24 h-8 my-2 justify-center flex"
               initial={{ y: 0 }}
               animate={{
-                y: isSquareVisible ? -200 : 0,
-                x: isSquareVisible ? 580 : 0,
+                y: isSquareVisible ? -250 : 0,
+                x: isSquareVisible ? 540 : 0,
               }}
               transition={{ duration: 0.6 }}
             >
@@ -36,8 +38,8 @@ export default function Home() {
               className="border-2 border-black w-24 h-8 my-2 flex justify-center"
               initial={{ y: 0 }}
               animate={{
-                y: isSquareVisible ? -200 : 0,
-                x: isSquareVisible ? 180 : 0,
+                y: isSquareVisible ? -250 : 0,
+                x: isSquareVisible ? 150 : 0,
               }}
               transition={{ duration: 0.6 }}
             >
@@ -48,8 +50,8 @@ export default function Home() {
             className="border-2 border-black w-full h-12 my-2 flex justify-center items-center"
             initial={{ y: 0 }}
             animate={{
-              y: isSquareVisible ? -200 : 0,
-              x: isSquareVisible ? 450 : 0,
+              y: isSquareVisible ? -250 : 0,
+              x: isSquareVisible ? 420 : 0,
               width: isSquareVisible ? "40rem" : "auto",
               height: isSquareVisible ? "3rem" : "3rem",
             }}
@@ -60,7 +62,7 @@ export default function Home() {
         </motion.div>
       </main>
       <main
-        className={`min-h-screen flex-col items-end justify-end p-24 ${
+        className={`min-h-screen flex flex-col items-end justify-end p-24 ${
           !isSquareVisible ? "hidden" : ""
         }`}
         onClick={handleSquare}
@@ -76,8 +78,8 @@ export default function Home() {
           className="border-[1px] border-black w-[44rem] h-48 p-2 flex justify-end flex-col"
           style={{
             position: "fixed",
-            top: 90,
-            right: 38,
+            top: "5%",
+            right: "5%",
             display: isSquareVisible ? "flex" : "none",
           }}
         ></motion.div>
